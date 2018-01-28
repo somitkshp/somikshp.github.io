@@ -64,13 +64,7 @@
 <![endif]-->
 </head>
 <body class="has-side-panel side-panel-right fullwidth-page side-push-panel">
-<!-- <audio autoplay loop>
-      <source src="images/bg/test.mp3">
-</audio> -->
-
-
 <script>
-
 function play_audio(task) {
       if(task == 'play'){
            $(".my_audio").trigger('play');
@@ -101,13 +95,14 @@ function play_audio(task) {
       <div class="header-nav-wrapper">
         <div class="container">
           <nav>
-            <div id="menuzord-right" class="menuzord red"> <a  onclick="play_audio('play')" class="menuzord-brand pull-left flip font-playball text-theme-colored font-32" href="javascript:void(0)">Happy <i class="fa fa-heart-o font-25"></i> Wedding 
+            <div id="menuzord-right" class="menuzord red"> <a class="menuzord-brand pull-left flip font-playball text-theme-colored font-32" href="javascript:void(0)">Happy <i class="fa fa-heart-o font-25"></i> Wedding 
 			<audio class="my_audio" controls preload="none" hidden>
 			<source src="images/bg/test.mp3" type="audio/mpeg">
 			</audio>
-<button onclick="play_audio('play')">PLAY</button>
-<button onclick="play_audio('stop')">STOP</button>
+<!-- <button onclick="play_audio('play')">PLAY</button>
+<button onclick="play_audio('stop')">STOP</button> -->
 </a>
+ 
              
               
       </div>
@@ -152,7 +147,9 @@ function play_audio(task) {
                   data-splitin="none" 
                   data-splitout="none" 
                   data-responsive_offset="on"
-                  style="z-index: 7; white-space: nowrap; font-weight:600; border-radius:45px;"><img src="images/heart-1.png" alt="">
+                  style="z-index: 7; white-space: nowrap; font-weight:600; border-radius:45px;">
+				  <!-- <a  onclick="play_audio('play')"> Touch Me !! </a>  -->
+				  <img src="images/heart-1.png" alt="" onload="play_audio('play')">
                 </div>
 
                 <!-- LAYER NR. 2 -->
