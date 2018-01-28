@@ -67,11 +67,13 @@
 <!-- <audio autoplay loop>
       <source src="images/bg/test.mp3">
 </audio> -->
-<audio id="myAudio" src="images/bg/test.mp3"></audio>
+<audio id="myAudio" loop src="images/bg/test.mp3" autoplay></audio>
 
 <script>
-document.getElementById('myAudio').play();
-</script>
+  function playMusic(){
+  music.play();
+  }
+  </script>	
 <div id="wrapper" class="clearfix">
   <!-- preloader -->
   <div id="preloader">
