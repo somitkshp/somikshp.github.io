@@ -67,10 +67,19 @@
 <!-- <audio autoplay loop>
       <source src="images/bg/test.mp3">
 </audio> -->
-<video id="myAudio" src="images/bg/test.mp3" onclick="this.play"></video>
+
 
 <script>
-document.getElementById('myAudio').play();
+$(".my_audio").trigger('load');
+function play_audio(task) {
+      if(task == 'play'){
+           $(".my_audio").trigger('play');
+      }
+      if(task == 'stop'){
+           $(".my_audio").trigger('pause');
+           $(".my_audio").prop("currentTime",0);
+      }
+ }
 </script>
 
 <script>
@@ -83,6 +92,12 @@ document.getElementById('myAudio').play();
   <div id="preloader">
     <div id="spinner">
       <div class="heart-preloader">
+	  <audio class="my_audio" controls preload="none" autoplay>
+    <source src="images/bg/test.mp3" type="audio/mpeg">
+ </audio>
+<!-- <button onclick="play_audio('play')">PLAY</button>
+<button onclick="play_audio('stop')">STOP</button> -->
+
         <i class="fa fa-heart font-36 infinite animated pulse"></i>
       </div>
     </div>
