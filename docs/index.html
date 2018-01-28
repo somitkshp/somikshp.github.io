@@ -73,6 +73,9 @@
 window.onload = function() {
     document.getElementById("my_audio").play();
 }
+$(document).ready(function() {
+    $("#my_audio").get(0).play();
+});
 $(".my_audio").trigger('load');
 function play_audio(task) {
       if(task == 'play'){
