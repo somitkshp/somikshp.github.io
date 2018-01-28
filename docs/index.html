@@ -70,13 +70,7 @@
 
 
 <script>
-window.onload = function() {
-    document.getElementById("my_audio").play();
-}
-$(document).ready(function() {
-    $("#my_audio").get(0).play();
-});
-$(".my_audio").trigger('load');
+
 function play_audio(task) {
       if(task == 'play'){
            $(".my_audio").trigger('play');
@@ -108,8 +102,11 @@ function play_audio(task) {
         <div class="container">
           <nav>
             <div id="menuzord-right" class="menuzord red"> <a class="menuzord-brand pull-left flip font-playball text-theme-colored font-32" href="javascript:void(0)">Happy <i class="fa fa-heart-o font-25"></i> Wedding 
-			<audio id="my_audio" src="images/bg/test.mp3" loop="loop">
-</audio>
+			<audio class="my_audio" controls preload="none" hidden>
+			<source src="images/bg/test.mp3" type="audio/mpeg">
+			</audio>
+<button onclick="play_audio('play')">PLAY</button>
+<button onclick="play_audio('stop')">STOP</button>
 </a>
              
               
