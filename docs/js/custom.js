@@ -618,12 +618,12 @@
         /* ---------------------------------------------------------------------------- */
         /* --------------------------- One Page Nav close on click -------------------- */
         /* ---------------------------------------------------------------------------- */
-        TM_menuCollapseOnClick: function() {
+        /* TM_menuCollapseOnClick: function() {
             $(document).on('click', '.onepage-nav a', function(e) {
                 $('.showhide').trigger('click');
                 return false;
             });
-        },
+        }, */
 
         /* ---------------------------------------------------------------------- */
         /* ----------- Active Menu Item on Reaching Different Sections ---------- */
